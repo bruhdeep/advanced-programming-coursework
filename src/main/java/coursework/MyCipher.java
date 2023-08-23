@@ -14,6 +14,7 @@ public class MyCipher {
 		cipher.init(Cipher.ENCRYPT_MODE, key);
 		byte[] encryptedBytes = cipher.doFinal(strToEncrypt.getBytes(StandardCharsets.UTF_8));
 		return new String(encryptedBytes, StandardCharsets.ISO_8859_1);
+		
 	}
 	
 	public static String decrypt(String strToDecrypt, String secretKey) throws Exception{
